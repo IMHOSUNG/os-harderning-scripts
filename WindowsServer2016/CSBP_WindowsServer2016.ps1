@@ -33,7 +33,7 @@ Configuration CSBP_WindowsServer2016 {
         [string[]]$ComputerName ='localhost'
         )
  
-    Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
+    #Import-DscResource -ModuleName 'PSDesiredStateConfiguration'
     Import-DscResource -ModuleName 'AuditPolicyDsc'
     Import-DscResource -ModuleName 'SecurityPolicyDsc'
 	Import-DscResource -ModuleName 'NetworkingDsc'
