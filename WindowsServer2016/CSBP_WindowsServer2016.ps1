@@ -2496,6 +2496,17 @@ Configuration CSBP_WindowsServer2016 {
           ValueType  = 'DWord'
           ValueData  = '1'
         }
+	
+	# Control no: AZ-WIN-00145
+        # DataSource: Registry Policy
+        # Ensure 'Turn off multicast name resolution' is set to 'Disabled'
+       Registry 'RemoteRegistry' {
+          Ensure     = 'Present'
+          Key        = 'HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\RemoteRegistry'
+          ValueName  = 'Start'
+          ValueType  = 'DWord'
+          ValueData  = '4'
+        }
 		
     }
  }
