@@ -1728,35 +1728,38 @@ Configuration CSBP_WindowsServer2016 {
         # CceId: CCE-36254-1
         # DataSource: Registry Policy
         # Ensure 'Allow Basic authentication' is set to 'Disabled'
-       Registry 'AllowBasic' {
-          Ensure     = 'Present'
-          Key        = 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WinRM\Client'
-          ValueName  = 'AllowBasic'
-          ValueType  = 'DWord'
-          ValueData  = '0'
-       } 
+	# For Using ansible this must be allow
+#        Registry 'AllowBasic' {
+#           Ensure     = 'Present'
+#           Key        = 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WinRM\Client'
+#           ValueName  = 'AllowBasic'
+#           ValueType  = 'DWord'
+#           ValueData  = '0'
+#        } 
 
         # CceId: CCE-38223-4
         # DataSource: Registry Policy
         # Ensure 'Allow unencrypted traffic' is set to 'Disabled'
-       Registry 'AllowUnencryptedTraffic' {
-          Ensure     = 'Present'
-          Key        = 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WinRM\Client'
-          ValueName  = 'AllowUnencryptedTraffic'
-          ValueType  = 'DWord'
-          ValueData  = '0'
-       }
+	# For Using ansible this must be allow
+#        Registry 'AllowUnencryptedTraffic' {
+#           Ensure     = 'Present'
+#           Key        = 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WinRM\Client'
+#           ValueName  = 'AllowUnencryptedTraffic'
+#           ValueType  = 'DWord'
+#           ValueData  = '0'
+#        }
 
         # CceId: CCE-38318-2
         # DataSource: Registry Policy
         # Ensure 'Disallow Digest authentication' is set to 'Enabled'
-        Registry 'AllowDigest' {
-          Ensure     = 'Present'
-          Key        = 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WinRM\Client'
-          ValueName  = 'AllowDigest'
-          ValueType  = 'DWord'
-          ValueData  = '0'
-       }
+	# For Using ansible this must be allow
+#         Registry 'AllowDigest' {
+#           Ensure     = 'Present'
+#           Key        = 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WinRM\Client'
+#           ValueName  = 'AllowDigest'
+#           ValueType  = 'DWord'
+#           ValueData  = '0'
+#        }
 
         # CceId: CCE-37490-0
         # DataSource: Registry Policy
