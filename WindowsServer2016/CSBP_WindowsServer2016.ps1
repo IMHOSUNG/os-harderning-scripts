@@ -1725,42 +1725,6 @@ Configuration CSBP_WindowsServer2016 {
           ValueData  = '1'
        }
 
-        # CceId: CCE-36254-1
-        # DataSource: Registry Policy
-        # Ensure 'Allow Basic authentication' is set to 'Disabled'
-	# For Using ansible this must be allow
-#        Registry 'AllowBasic' {
-#           Ensure     = 'Present'
-#           Key        = 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WinRM\Client'
-#           ValueName  = 'AllowBasic'
-#           ValueType  = 'DWord'
-#           ValueData  = '0'
-#        } 
-
-        # CceId: CCE-38223-4
-        # DataSource: Registry Policy
-        # Ensure 'Allow unencrypted traffic' is set to 'Disabled'
-	# For Using ansible this must be allow
-#        Registry 'AllowUnencryptedTraffic' {
-#           Ensure     = 'Present'
-#           Key        = 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WinRM\Client'
-#           ValueName  = 'AllowUnencryptedTraffic'
-#           ValueType  = 'DWord'
-#           ValueData  = '0'
-#        }
-
-        # CceId: CCE-38318-2
-        # DataSource: Registry Policy
-        # Ensure 'Disallow Digest authentication' is set to 'Enabled'
-	# For Using ansible this must be allow
-#         Registry 'AllowDigest' {
-#           Ensure     = 'Present'
-#           Key        = 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\Windows\WinRM\Client'
-#           ValueName  = 'AllowDigest'
-#           ValueType  = 'DWord'
-#           ValueData  = '0'
-#        }
-
         # CceId: CCE-37490-0
         # DataSource: Registry Policy
         # Ensure 'Always install with elevated privileges' is set to 'Disabled'
@@ -1943,16 +1907,6 @@ Configuration CSBP_WindowsServer2016 {
 			ValueData  = '1'
 		}
 		
-		# CceId: CCE-36000-8
-		# DataSource: Registry Policy
-		# Ensure 'Disallow WinRM from storing RunAs credentials' is set to 'Enabled'
-		Registry 'DisableRunAs' {
-			Ensure    = 'Present'
-			Key       = 'HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\WinRM\Service'
-			ValueName = 'DisableRunAs'
-			ValueType = 'DWord'
-			ValueData = '1'
-		}
 		# CceId: CCE-35859-8
 		# DataSource: Registry Policy
 		# Ensure 'Configure Windows SmartScreen' is set to 'Enabled' 
@@ -1962,17 +1916,6 @@ Configuration CSBP_WindowsServer2016 {
 			ValueName = 'EnableSmartScreen'
 			ValueType = 'DWord'
 			ValueData = '1'
-		}
-		
-		# CceId: CCE-36254-1
-		# DataSource: Registry Policy
-		# Ensure 'Allow Basic authentication' is set to 'Disabled' 
-		Registry 'AllowBasic1' {
-			Ensure    = 'Present'
-			Key       = 'HKEY_LOCAL_MACHINE\Software\Policies\Microsoft\Windows\WinRM\Service'
-			ValueName = 'AllowBasic'
-			ValueType = 'DWord'
-			ValueData = '0'
 		}
 		
 		# CceId: CCE-37126-0
