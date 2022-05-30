@@ -2350,7 +2350,7 @@ Configuration CSBP_WindowsServer2016 {
 			Key          = 'HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Microsoft\WindowsFirewall\PublicProfile'
 			ValueName    = 'EnableFirewall'
 			ValueType    = 'DWord'
-			ValueData    = '1'
+			ValueData    = '0'
 		
 		}
 		
